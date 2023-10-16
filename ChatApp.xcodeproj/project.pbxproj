@@ -16,6 +16,7 @@
 		CC9E58E12ADB545A00F8ED3D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58E02ADB545A00F8ED3D /* LoginViewController.swift */; };
 		CC9E58E32ADB547900F8ED3D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58E22ADB547900F8ED3D /* SignUpViewController.swift */; };
 		CC9E58E52ADB54B400F8ED3D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58E42ADB54B400F8ED3D /* ChatViewController.swift */; };
+		CC9E58E72ADDB72700F8ED3D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58E62ADDB72700F8ED3D /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		CC9E58E02ADB545A00F8ED3D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CC9E58E22ADB547900F8ED3D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CC9E58E42ADB54B400F8ED3D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		CC9E58E62ADDB72700F8ED3D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,16 +66,41 @@
 			children = (
 				CC9E58CC2AD9AED700F8ED3D /* AppDelegate.swift */,
 				CC9E58CE2AD9AED700F8ED3D /* SceneDelegate.swift */,
-				CC9E58D02AD9AED700F8ED3D /* RegisterViewController.swift */,
-				CC9E58E02ADB545A00F8ED3D /* LoginViewController.swift */,
-				CC9E58E22ADB547900F8ED3D /* SignUpViewController.swift */,
-				CC9E58E42ADB54B400F8ED3D /* ChatViewController.swift */,
-				CC9E58D22AD9AED700F8ED3D /* Main.storyboard */,
+				CC9E58E82ADDB73A00F8ED3D /* Models */,
+				CC9E58E92ADDB74400F8ED3D /* Views */,
+				CC9E58EA2ADDB76200F8ED3D /* Controllers */,
 				CC9E58D52AD9AED800F8ED3D /* Assets.xcassets */,
 				CC9E58D72AD9AED800F8ED3D /* LaunchScreen.storyboard */,
 				CC9E58DA2AD9AED800F8ED3D /* Info.plist */,
 			);
 			path = ChatApp;
+			sourceTree = "<group>";
+		};
+		CC9E58E82ADDB73A00F8ED3D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CC9E58E92ADDB74400F8ED3D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CC9E58D22AD9AED700F8ED3D /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CC9E58EA2ADDB76200F8ED3D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CC9E58D02AD9AED700F8ED3D /* RegisterViewController.swift */,
+				CC9E58E02ADB545A00F8ED3D /* LoginViewController.swift */,
+				CC9E58E22ADB547900F8ED3D /* SignUpViewController.swift */,
+				CC9E58E42ADB54B400F8ED3D /* ChatViewController.swift */,
+				CC9E58E62ADDB72700F8ED3D /* SettingsViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +176,7 @@
 			files = (
 				CC9E58E12ADB545A00F8ED3D /* LoginViewController.swift in Sources */,
 				CC9E58D12AD9AED700F8ED3D /* RegisterViewController.swift in Sources */,
+				CC9E58E72ADDB72700F8ED3D /* SettingsViewController.swift in Sources */,
 				CC9E58CD2AD9AED700F8ED3D /* AppDelegate.swift in Sources */,
 				CC9E58CF2AD9AED700F8ED3D /* SceneDelegate.swift in Sources */,
 				CC9E58E52ADB54B400F8ED3D /* ChatViewController.swift in Sources */,

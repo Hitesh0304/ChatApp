@@ -7,8 +7,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var appNameLabel: UILabel!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

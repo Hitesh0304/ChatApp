@@ -17,6 +17,7 @@
 		CC9E58E32ADB547900F8ED3D /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58E22ADB547900F8ED3D /* SignUpViewController.swift */; };
 		CC9E58E52ADB54B400F8ED3D /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58E42ADB54B400F8ED3D /* ChatViewController.swift */; };
 		CC9E58E72ADDB72700F8ED3D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58E62ADDB72700F8ED3D /* SettingsViewController.swift */; };
+		CC9E58EC2ADE18BB00F8ED3D /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58EB2ADE18BB00F8ED3D /* ContactsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		CC9E58E22ADB547900F8ED3D /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		CC9E58E42ADB54B400F8ED3D /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		CC9E58E62ADDB72700F8ED3D /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		CC9E58EB2ADE18BB00F8ED3D /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				CC9E58E22ADB547900F8ED3D /* SignUpViewController.swift */,
 				CC9E58E42ADB54B400F8ED3D /* ChatViewController.swift */,
 				CC9E58E62ADDB72700F8ED3D /* SettingsViewController.swift */,
+				CC9E58EB2ADE18BB00F8ED3D /* ContactsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				CC9E58E72ADDB72700F8ED3D /* SettingsViewController.swift in Sources */,
 				CC9E58CD2AD9AED700F8ED3D /* AppDelegate.swift in Sources */,
 				CC9E58CF2AD9AED700F8ED3D /* SceneDelegate.swift in Sources */,
+				CC9E58EC2ADE18BB00F8ED3D /* ContactsViewController.swift in Sources */,
 				CC9E58E52ADB54B400F8ED3D /* ChatViewController.swift in Sources */,
 				CC9E58E32ADB547900F8ED3D /* SignUpViewController.swift in Sources */,
 			);

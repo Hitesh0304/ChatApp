@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import ChatAppStrings
 
 class SignUpViewController: UIViewController {
-
+    
     @IBOutlet weak var signUpLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
@@ -29,19 +30,21 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+        setupStrings()
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension SignUpViewController {
+    func setupStrings() {
+        signUpLabel.text = Strings.signUp
+        nameLabel.text = Strings.name
+        emailLabel.text = Strings.email
+        usernameLabel.text = Strings.username
+        passwordLabel.text = Strings.password
+        confirmPasswordLabel.text = Strings.confirmPassword
+        signUpButton.setTitle(Strings.signUp, for: .normal)
+        loginButton.setTitle(Strings.login, for: .normal)
     }
-    */
-
 }

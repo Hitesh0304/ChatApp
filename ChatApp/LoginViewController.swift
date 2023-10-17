@@ -25,7 +25,18 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupStrings()
+        
+    }
+}
+
+extension LoginViewController {
+    func setupStrings() {
         loginLabel.text = Strings.login
+        usernameLabel.text = Strings.username
+        passwordLabel.text = Strings.password
+        loginButton.setTitle(Strings.login, for: .normal)
+        signUpButton.setTitle(Strings.signUp, for: .normal)
     }
     
     @IBAction func loginButtonPressed() {

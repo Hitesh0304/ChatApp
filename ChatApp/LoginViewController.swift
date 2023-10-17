@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ChatAppStrings
 
 class LoginViewController: UIViewController {
 
@@ -24,17 +25,18 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        loginLabel.text = Strings.login
     }
     
+    @IBAction func loginButtonPressed() {
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
+    
+    @IBAction func signUpButtonPressed() {
+        guard let signUpVC = UIStoryboard(name: "Registration", bundle: nil).instantiateViewController(identifier: "SignUpVC") as? SignUpViewController else {
+            return
+        }
+        
+        self.navigationController?.pushViewController(signUpVC, animated: true)
+    }
 }

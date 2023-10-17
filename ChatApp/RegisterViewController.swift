@@ -21,7 +21,7 @@ class RegisterViewController: UIViewController {
     }
 
     @IBAction func loginButtonPressed() {
-        guard let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else {
+        guard let loginVC = UIStoryboard(name: "Registration", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as? LoginViewController else {
             return
         }
         
@@ -29,7 +29,7 @@ class RegisterViewController: UIViewController {
     }
     
     @IBAction func signUpButtonPressed() {
-        guard let signUpVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "SignUpVC") as? SignUpViewController else {
+        guard let signUpVC = UIStoryboard(name: "Registration", bundle: nil).instantiateViewController(identifier: "SignUpVC") as? SignUpViewController else {
             return
         }
         

@@ -27,6 +27,10 @@
 		CC9E59132ADE37ED00F8ED3D /* ChatAppUIKit.h in Headers */ = {isa = PBXBuildFile; fileRef = CC9E59102ADE37ED00F8ED3D /* ChatAppUIKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC9E59162ADE37ED00F8ED3D /* ChatAppUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC9E590E2ADE37ED00F8ED3D /* ChatAppUIKit.framework */; };
 		CC9E59172ADE37ED00F8ED3D /* ChatAppUIKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CC9E590E2ADE37ED00F8ED3D /* ChatAppUIKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CC9E591F2ADF7A1400F8ED3D /* ProximaNova-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = CC9E591C2ADF7A1400F8ED3D /* ProximaNova-Regular.otf */; };
+		CC9E59202ADF7A1400F8ED3D /* ProximaNova-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CC9E591D2ADF7A1400F8ED3D /* ProximaNova-Bold.otf */; };
+		CC9E59212ADF7A1400F8ED3D /* ProximaNova-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = CC9E591E2ADF7A1400F8ED3D /* ProximaNova-Semibold.otf */; };
+		CC9E59242ADF7AF300F8ED3D /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E59232ADF7AF300F8ED3D /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +86,10 @@
 		CC9E590E2ADE37ED00F8ED3D /* ChatAppUIKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ChatAppUIKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9E59102ADE37ED00F8ED3D /* ChatAppUIKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatAppUIKit.h; sourceTree = "<group>"; };
 		CC9E59112ADE37ED00F8ED3D /* ChatAppUIKit.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = ChatAppUIKit.docc; sourceTree = "<group>"; };
+		CC9E591C2ADF7A1400F8ED3D /* ProximaNova-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Regular.otf"; sourceTree = "<group>"; };
+		CC9E591D2ADF7A1400F8ED3D /* ProximaNova-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Bold.otf"; sourceTree = "<group>"; };
+		CC9E591E2ADF7A1400F8ED3D /* ProximaNova-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ProximaNova-Semibold.otf"; sourceTree = "<group>"; };
+		CC9E59232ADF7AF300F8ED3D /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +142,7 @@
 		CC9E58CB2AD9AED700F8ED3D /* ChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				CC9E591B2ADF79DD00F8ED3D /* Fonts */,
 				CC9E58F12ADE2EAD00F8ED3D /* Launcher */,
 				CC9E58EF2ADE2DB500F8ED3D /* Registration */,
 				CC9E58F02ADE2E0200F8ED3D /* Home */,
@@ -187,10 +196,29 @@
 		CC9E590F2ADE37ED00F8ED3D /* ChatAppUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CC9E59222ADF7AB900F8ED3D /* Fonts */,
 				CC9E59102ADE37ED00F8ED3D /* ChatAppUIKit.h */,
 				CC9E59112ADE37ED00F8ED3D /* ChatAppUIKit.docc */,
 			);
 			path = ChatAppUIKit;
+			sourceTree = "<group>";
+		};
+		CC9E591B2ADF79DD00F8ED3D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CC9E591D2ADF7A1400F8ED3D /* ProximaNova-Bold.otf */,
+				CC9E591C2ADF7A1400F8ED3D /* ProximaNova-Regular.otf */,
+				CC9E591E2ADF7A1400F8ED3D /* ProximaNova-Semibold.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CC9E59222ADF7AB900F8ED3D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				CC9E59232ADF7AF300F8ED3D /* Fonts.swift */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,6 +348,9 @@
 				CC9E58D92AD9AED800F8ED3D /* LaunchScreen.storyboard in Resources */,
 				CC9E58D62AD9AED800F8ED3D /* Assets.xcassets in Resources */,
 				CC9E58D42AD9AED700F8ED3D /* Registration.storyboard in Resources */,
+				CC9E59202ADF7A1400F8ED3D /* ProximaNova-Bold.otf in Resources */,
+				CC9E591F2ADF7A1400F8ED3D /* ProximaNova-Regular.otf in Resources */,
+				CC9E59212ADF7A1400F8ED3D /* ProximaNova-Semibold.otf in Resources */,
 				CC9E58F32ADE2EE100F8ED3D /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC9E59242ADF7AF300F8ED3D /* Fonts.swift in Sources */,
 				CC9E59122ADE37ED00F8ED3D /* ChatAppUIKit.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,6 +704,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -705,6 +738,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

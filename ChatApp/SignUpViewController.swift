@@ -7,6 +7,7 @@
 
 import UIKit
 import ChatAppStrings
+import ChatAppUIKit
 
 class SignUpViewController: UIViewController {
     
@@ -33,6 +34,7 @@ class SignUpViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupStrings()
+        signUpLabel.font = Fonts.apply(.title, .regular)
     }
 }
 

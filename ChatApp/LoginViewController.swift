@@ -12,10 +12,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var loginLabel: UILabel!
     
-    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var usernameTextField: UITextField!
-    
-    @IBOutlet weak var passwordLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
     
     @IBOutlet weak var loginButton: UIButton!
@@ -33,8 +30,8 @@ class LoginViewController: UIViewController {
 extension LoginViewController {
     func setupStrings() {
         loginLabel.text = Strings.login
-        usernameLabel.text = Strings.username
-        passwordLabel.text = Strings.password
+//        usernameLabel.text = Strings.username
+//        passwordLabel.text = Strings.password
         loginButton.setTitle(Strings.login, for: .normal)
         signUpButton.setTitle(Strings.signUp, for: .normal)
     }

@@ -42,10 +42,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="nTT-nK-ZDf">
-                                <rect key="frame" x="100" y="679" width="193" height="99"/>
+                                <rect key="frame" x="60" y="679" width="273" height="99"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd6-2a-byF">
-                                        <rect key="frame" x="0.0" y="0.0" width="193" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="Obq-Kj-CSn"/>
                                         </constraints>
@@ -53,7 +53,7 @@
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dEG-Uz-YLu">
-                                        <rect key="frame" x="0.0" y="57" width="193" height="42"/>
+                                        <rect key="frame" x="0.0" y="57" width="273" height="42"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
@@ -66,8 +66,8 @@
                         <viewLayoutGuide key="safeArea" id="2I4-52-qlH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nTT-nK-ZDf" firstAttribute="leading" secondItem="2I4-52-qlH" secondAttribute="leading" constant="100" id="4F7-mP-lvT"/>
-                            <constraint firstItem="2I4-52-qlH" firstAttribute="trailing" secondItem="nTT-nK-ZDf" secondAttribute="trailing" constant="100" id="7Ce-ow-zG7"/>
+                            <constraint firstItem="nTT-nK-ZDf" firstAttribute="leading" secondItem="2I4-52-qlH" secondAttribute="leading" constant="60" id="4F7-mP-lvT"/>
+                            <constraint firstItem="2I4-52-qlH" firstAttribute="trailing" secondItem="nTT-nK-ZDf" secondAttribute="trailing" constant="60" id="7Ce-ow-zG7"/>
                             <constraint firstItem="2I4-52-qlH" firstAttribute="bottom" secondItem="nTT-nK-ZDf" secondAttribute="bottom" constant="40" id="HiI-Aj-Ion"/>
                             <constraint firstItem="sS1-ub-g95" firstAttribute="top" secondItem="2I4-52-qlH" secondAttribute="top" constant="20" id="Oxj-JX-442"/>
                             <constraint firstItem="2I4-52-qlH" firstAttribute="trailing" secondItem="3rA-9G-sP5" secondAttribute="trailing" constant="20" id="bne-xE-DMG"/>
@@ -138,10 +138,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="dWx-QP-ZhZ">
-                                <rect key="frame" x="100" y="679" width="193" height="99"/>
+                                <rect key="frame" x="60" y="679" width="273" height="99"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nAq-AZ-9Gt">
-                                        <rect key="frame" x="0.0" y="0.0" width="193" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="273" height="42"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="42" id="JG6-Su-sOP"/>
                                         </constraints>
@@ -149,9 +149,12 @@
                                         <state key="normal" title="Button"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPU-f2-jvX">
-                                        <rect key="frame" x="0.0" y="57" width="193" height="42"/>
+                                        <rect key="frame" x="0.0" y="57" width="273" height="42"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="loginButtonPressed" destination="bnS-A8-fDt" eventType="touchUpInside" id="vjh-Pc-KmE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -159,13 +162,13 @@
                         <viewLayoutGuide key="safeArea" id="k3E-cI-3lH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="k3E-cI-3lH" firstAttribute="trailing" secondItem="dWx-QP-ZhZ" secondAttribute="trailing" constant="100" id="6db-47-tDM"/>
+                            <constraint firstItem="k3E-cI-3lH" firstAttribute="trailing" secondItem="dWx-QP-ZhZ" secondAttribute="trailing" constant="60" id="6db-47-tDM"/>
                             <constraint firstItem="k3E-cI-3lH" firstAttribute="bottom" secondItem="dWx-QP-ZhZ" secondAttribute="bottom" constant="40" id="DQq-Ga-aFP"/>
                             <constraint firstItem="xxM-Ig-tur" firstAttribute="top" secondItem="k3E-cI-3lH" secondAttribute="top" constant="20" id="IR7-UB-v2A"/>
                             <constraint firstItem="PeU-gi-6xv" firstAttribute="top" secondItem="xxM-Ig-tur" secondAttribute="bottom" constant="50" id="OsG-Il-g26"/>
                             <constraint firstItem="PeU-gi-6xv" firstAttribute="leading" secondItem="k3E-cI-3lH" secondAttribute="leading" constant="20" id="Y8r-Iw-lyM"/>
                             <constraint firstItem="xxM-Ig-tur" firstAttribute="leading" secondItem="k3E-cI-3lH" secondAttribute="leading" constant="100" id="cuc-ed-Xp8"/>
-                            <constraint firstItem="dWx-QP-ZhZ" firstAttribute="leading" secondItem="k3E-cI-3lH" secondAttribute="leading" constant="100" id="hmb-ze-n8s"/>
+                            <constraint firstItem="dWx-QP-ZhZ" firstAttribute="leading" secondItem="k3E-cI-3lH" secondAttribute="leading" constant="60" id="hmb-ze-n8s"/>
                             <constraint firstItem="k3E-cI-3lH" firstAttribute="trailing" secondItem="PeU-gi-6xv" secondAttribute="trailing" constant="20" id="ldl-d0-U4b"/>
                             <constraint firstItem="k3E-cI-3lH" firstAttribute="trailing" secondItem="xxM-Ig-tur" secondAttribute="trailing" constant="100" id="ung-fh-C9Z"/>
                         </constraints>

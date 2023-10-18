@@ -7,6 +7,7 @@
 
 import UIKit
 import ChatAppStrings
+import ChatAppUIKit
 
 class LoginViewController: UIViewController {
 
@@ -23,17 +24,17 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         setupStrings()
-        
+        loginLabel.font = Fonts.apply(.title, .semibold)
     }
 }
 
 extension LoginViewController {
     func setupStrings() {
         loginLabel.text = Strings.login
-//        usernameLabel.text = Strings.username
-//        passwordLabel.text = Strings.password
+        usernameTextField.placeholder = Strings.username
+        passwordTextField.placeholder = Strings.password
         loginButton.setTitle(Strings.login, for: .normal)
-        signUpButton.setTitle(Strings.signUp, for: .normal)
+        signUpButton.setTitle(Strings.dontHaveAnAccount, for: .normal)
     }
     
     @IBAction func loginButtonPressed() {

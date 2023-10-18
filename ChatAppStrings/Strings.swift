@@ -15,5 +15,6 @@ public struct Strings {
     public static let name = "Name"
     public static let email = "Email"
     public static let confirmPassword = "Confirm Password"
-    
+    public static let dontHaveAnAccount = "Don't have an Account? Sign Up"
+    public static let alreadyHaveAnAccount = "Already have an Account? Log In"
 }

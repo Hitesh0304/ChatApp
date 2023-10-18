@@ -27,19 +27,23 @@ class SignUpViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupStrings()
-        signUpLabel.font = Fonts.apply(.title, .regular)
+        signUpLabel.font = Fonts.apply(.title, .semibold)
     }
 }
 
 extension SignUpViewController {
     func setupStrings() {
         signUpLabel.text = Strings.signUp
-//        nameLabel.text = Strings.name
-//        emailLabel.text = Strings.email
-//        usernameLabel.text = Strings.username
-//        passwordLabel.text = Strings.password
-//        confirmPasswordLabel.text = Strings.confirmPassword
+        nameTextField.placeholder = Strings.name
+        emailTextField.placeholder = Strings.email
+        usernameTextField.placeholder = Strings.username
+        passwordTextField.placeholder = Strings.password
+        confirmPasswordTextField.placeholder = Strings.confirmPassword
         signUpButton.setTitle(Strings.signUp, for: .normal)
-        loginButton.setTitle(Strings.login, for: .normal)
+        loginButton.setTitle(Strings.alreadyHaveAnAccount, for: .normal)
+    }
+    
+    @IBAction func loginButtonPressed() {
+        self.navigationController?.popViewController(animated: true)
     }
 }

@@ -1,6 +1,0 @@
-framework module Pods_ChatAppStrings {
-  umbrella header "Pods-ChatAppStrings-umbrella.h"
-
-  export *
-  module * { export * }
-}

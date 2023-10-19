@@ -8,11 +8,10 @@
 import UIKit
 import ChatAppStrings
 import ChatAppUIKit
-import CLTypingLabel
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var loginLabel: CLTypingLabel!
+    @IBOutlet weak var loginLabel: UILabel!
     
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!

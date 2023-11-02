@@ -38,7 +38,22 @@ extension LoginViewController {
     }
     
     @IBAction func loginButtonPressed() {
-
+        guard let username = usernameTextField.text, !username.isEmpty else {
+            //TODO - Highlight field with error
+            print("username error")
+            return
+        }
+        
+        guard let password = passwordTextField.text, !password.isEmpty else {
+            //TODO - Highlight field with error
+            print("password error")
+            return
+        }
+        
+        //Login
+        AuthHandler.shared.login(username: username, password: password) {[weak self] in
+            self?.navigateToHome()
+        }
     }
     
     @IBAction func signUpButtonPressed() {
@@ -47,5 +62,17 @@ extension LoginViewController {
         }
         
         self.navigationController?.pushViewController(signUpVC, animated: true)
+    }
+    
+    func navigateToHome() {
+        guard let tabVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "TabVC") as? UITabBarController else {
+            return
+        }
+        let navigationController = UINavigationController(rootViewController: tabVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.modalPresentationCapturesStatusBarAppearance = true
+        dismiss(animated: false) {[weak self] in
+            self?.present(navigationController, animated: true)
+        }
     }
 }

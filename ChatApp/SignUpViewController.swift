@@ -46,4 +46,73 @@ extension SignUpViewController {
     @IBAction func loginButtonPressed() {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func signUpButtonPressed() {
+        guard let name = nameTextField.text, !name.isEmpty else {
+            //TODO - Highlight field with error
+            print("name error")
+            return
+        }
+        
+        guard let email = emailTextField.text, !email.isEmpty else {
+            //TODO - Highlight field with error
+            print("email error")
+            return
+        }
+        
+        guard isValidEmail(email) else {
+            //TODO - Highlight field with error that email is not valid
+            print("email format error")
+            return
+        }
+        
+        guard let username = usernameTextField.text, !username.isEmpty else {
+            //TODO - Highlight field with error
+            print("username error")
+            return
+        }
+        
+        guard let password = passwordTextField.text, !password.isEmpty else {
+            //TODO - Highlight field with error
+            print("password error")
+            return
+        }
+        
+        guard let confirmPassword = confirmPasswordTextField.text, !confirmPassword.isEmpty, confirmPassword == password else {
+            //TODO - Highlight field with error
+            print("confirmPassword error")
+            return
+        }
+        
+        //Create User Account
+        AuthHandler.shared.signUp(username: username, email: email, password: password) {[weak self] in
+            self?.navigateToHome()
+        }
+    }
+    
+    func isValidEmail(_ email: String) -> Bool {
+        do {
+            let regex = try NSRegularExpression(pattern: Strings.emailRegex, options: .caseInsensitive)
+            let matches = regex.matches(
+                in: email,
+                options: [],
+                range: NSRange(location: 0, length: email.utf16.count)
+            )
+            return matches.count > 0
+        } catch {
+            return false
+        }
+    }
+    
+    func navigateToHome() {
+        guard let tabVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "TabVC") as? UITabBarController else {
+            return
+        }
+        let navigationController = UINavigationController(rootViewController: tabVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.modalPresentationCapturesStatusBarAppearance = true
+        dismiss(animated: false) {[weak self] in
+            self?.present(navigationController, animated: true)
+        }
+    }
 }

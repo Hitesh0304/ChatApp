@@ -40,12 +40,14 @@ extension LoginViewController {
     @IBAction func loginButtonPressed() {
         guard let username = usernameTextField.text, !username.isEmpty else {
             //TODO - Highlight field with error
+            showErrorUI(txtfield: usernameTextField)
             print("username error")
             return
         }
         
         guard let password = passwordTextField.text, !password.isEmpty else {
             //TODO - Highlight field with error
+            showErrorUI(txtfield: passwordTextField)
             print("password error")
             return
         }
@@ -74,5 +76,10 @@ extension LoginViewController {
         dismiss(animated: false) {[weak self] in
             self?.present(navigationController, animated: true)
         }
+    }
+    
+    func showErrorUI(txtfield: UITextField) {
+        txtfield.layer.borderColor = UIColor.red.cgColor
+        txtfield.layer.borderWidth = 1.0
     }
 }

@@ -50,12 +50,14 @@ extension SignUpViewController {
     @IBAction func signUpButtonPressed() {
         guard let name = nameTextField.text, !name.isEmpty else {
             //TODO - Highlight field with error
+            showErrorUI(txtfield: nameTextField)
             print("name error")
             return
         }
         
         guard let email = emailTextField.text, !email.isEmpty else {
             //TODO - Highlight field with error
+            showErrorUI(txtfield: emailTextField)
             print("email error")
             return
         }
@@ -63,23 +65,27 @@ extension SignUpViewController {
         guard isValidEmail(email) else {
             //TODO - Highlight field with error that email is not valid
             print("email format error")
+            showErrorUI(txtfield: emailTextField)
             return
         }
         
         guard let username = usernameTextField.text, !username.isEmpty else {
             //TODO - Highlight field with error
+            showErrorUI(txtfield: usernameTextField)
             print("username error")
             return
         }
         
         guard let password = passwordTextField.text, !password.isEmpty else {
             //TODO - Highlight field with error
+            showErrorUI(txtfield: passwordTextField)
             print("password error")
             return
         }
         
         guard let confirmPassword = confirmPasswordTextField.text, !confirmPassword.isEmpty, confirmPassword == password else {
             //TODO - Highlight field with error
+            showErrorUI(txtfield: confirmPasswordTextField)
             print("confirmPassword error")
             return
         }
@@ -114,5 +120,10 @@ extension SignUpViewController {
         dismiss(animated: false) {[weak self] in
             self?.present(navigationController, animated: true)
         }
+    }
+    
+    func showErrorUI(txtfield: UITextField) {
+        txtfield.layer.borderColor = UIColor.red.cgColor
+        txtfield.layer.borderWidth = 1.0
     }
 }

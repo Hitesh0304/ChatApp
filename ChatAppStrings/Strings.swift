@@ -18,4 +18,5 @@ public struct Strings {
     public static let dontHaveAnAccount = "Don't have an Account? Sign Up"
     public static let alreadyHaveAnAccount = "Already have an Account? Log In"
     public static let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+    public static let logout = "Log Out"
 }

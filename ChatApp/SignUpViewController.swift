@@ -114,11 +114,10 @@ extension SignUpViewController {
         guard let tabVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "TabVC") as? UITabBarController else {
             return
         }
-        let navigationController = UINavigationController(rootViewController: tabVC)
-        navigationController.modalPresentationStyle = .fullScreen
-        navigationController.modalPresentationCapturesStatusBarAppearance = true
+        
+        tabVC.modalPresentationStyle = .fullScreen
         dismiss(animated: false) {[weak self] in
-            self?.present(navigationController, animated: true)
+            self?.present(tabVC, animated: true)
         }
     }
     

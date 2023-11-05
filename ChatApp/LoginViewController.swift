@@ -10,7 +10,7 @@ import ChatAppStrings
 import ChatAppUIKit
 
 class LoginViewController: UIViewController {
-
+    
     @IBOutlet weak var loginLabel: UILabel!
     
     @IBOutlet weak var usernameTextField: UITextField!
@@ -21,7 +21,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         setupStrings()
         loginLabel.font = Fonts.apply(.title, .semibold)
@@ -67,12 +67,14 @@ extension LoginViewController {
     }
     
     func navigateToHome() {
-        guard let tabVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "TabVC") as? UITabBarController else {
+        guard let tabVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "TabBarVC") as? UITabBarController else {
             return
         }
+        
         let navigationController = UINavigationController(rootViewController: tabVC)
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.modalPresentationCapturesStatusBarAppearance = true
+        
         dismiss(animated: false) {[weak self] in
             self?.present(navigationController, animated: true)
         }

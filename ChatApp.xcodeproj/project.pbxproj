@@ -190,14 +190,10 @@
 		CC9E58F02ADE2E0200F8ED3D /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				CC9E58E42ADB54B400F8ED3D /* ChatListViewController.swift */,
-				CC9E58E62ADDB72700F8ED3D /* SettingsViewController.swift */,
-				CC9E58EB2ADE18BB00F8ED3D /* ContactsViewController.swift */,
+				CCB38CB22AF81E9F003BC40C /* ChatList */,
+				CCB38CB32AF81EAD003BC40C /* Settings */,
+				CCB38CB42AF81EB5003BC40C /* Contacts */,
 				CC9E58F22ADE2EE100F8ED3D /* Home.storyboard */,
-				CCB38CA82AF6BF38003BC40C /* Message.swift */,
-				CCB38CAA2AF6BF9D003BC40C /* ChatViewController.swift */,
-				CCB38CAC2AF6FB6C003BC40C /* MessageCell.swift */,
-				CCB38CAD2AF6FB6C003BC40C /* MessageCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -247,6 +243,50 @@
 				CC9E59232ADF7AF300F8ED3D /* Fonts.swift */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		CCB38CB22AF81E9F003BC40C /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				CCB38CB52AF81EE4003BC40C /* Chat */,
+				CC9E58E42ADB54B400F8ED3D /* ChatListViewController.swift */,
+			);
+			path = ChatList;
+			sourceTree = "<group>";
+		};
+		CCB38CB32AF81EAD003BC40C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				CC9E58E62ADDB72700F8ED3D /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		CCB38CB42AF81EB5003BC40C /* Contacts */ = {
+			isa = PBXGroup;
+			children = (
+				CC9E58EB2ADE18BB00F8ED3D /* ContactsViewController.swift */,
+			);
+			path = Contacts;
+			sourceTree = "<group>";
+		};
+		CCB38CB52AF81EE4003BC40C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				CCB38CAA2AF6BF9D003BC40C /* ChatViewController.swift */,
+				CCB38CB62AF81F18003BC40C /* Cells */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		CCB38CB62AF81F18003BC40C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CCB38CA82AF6BF38003BC40C /* Message.swift */,
+				CCB38CAC2AF6FB6C003BC40C /* MessageCell.swift */,
+				CCB38CAD2AF6FB6C003BC40C /* MessageCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

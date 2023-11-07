@@ -32,14 +32,14 @@
                             <constraint firstItem="6CZ-Yz-kiG" firstAttribute="leading" secondItem="ilK-kM-ppp" secondAttribute="leading" constant="100" id="RgU-ex-jDj"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="DnZ-FG-HEZ"/>
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="DnZ-FG-HEZ"/>
                     <navigationItem key="navigationItem" id="BWZ-BT-WJS"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7bv-RR-eo0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6918.320610687023" y="1109.8591549295775"/>
+            <point key="canvasLocation" x="4105" y="1837"/>
         </scene>
-        <!--Item-->
+        <!--Settings View Controller-->
         <scene sceneID="JPL-Pi-fkE">
             <objects>
                 <viewController storyboardIdentifier="SettingsVC" id="PAI-c1-bH8" customClass="SettingsViewController" customModule="ChatApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -119,7 +119,7 @@
                             <constraint firstItem="g3B-dw-eLr" firstAttribute="leading" secondItem="RoE-1E-a3h" secondAttribute="leading" constant="20" id="uMW-iG-OzO"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="wOq-hp-ygh"/>
+                    <tabBarItem key="tabBarItem" id="wOq-hp-ygh"/>
                     <navigationItem key="navigationItem" id="oQj-ay-5sb"/>
                     <connections>
                         <outlet property="logOutButton" destination="2mE-mI-rum" id="cCP-NW-APm"/>
@@ -132,7 +132,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KvT-ye-eJz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5977.8625954198469" y="1109.8591549295775"/>
+            <point key="canvasLocation" x="4990" y="1837"/>
         </scene>
         <!--Item-->
         <scene sceneID="4WC-No-YFR">
@@ -174,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HUK-DS-nkS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5031.2977099236641" y="1109.8591549295775"/>
+            <point key="canvasLocation" x="3273" y="1837"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="3OD-C5-s7C">
@@ -227,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RKo-zZ-OS7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4105" y="1855"/>
+            <point key="canvasLocation" x="3273" y="2546"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ts0-8Y-eyX">

@@ -12,6 +12,7 @@ import ChatAppUIKit
 
 class SettingsViewController: UIViewController {
     
+    
     @IBOutlet weak var settingsLabel: UILabel!
     @IBOutlet weak var profileLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
@@ -21,6 +22,7 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Settings"
         setupStrings()
         setupFonts()
         setupColors()

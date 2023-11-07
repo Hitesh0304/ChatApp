@@ -42,6 +42,8 @@
 		CCB38CAB2AF6BF9D003BC40C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB38CAA2AF6BF9D003BC40C /* ChatViewController.swift */; };
 		CCB38CAE2AF6FB6C003BC40C /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB38CAC2AF6FB6C003BC40C /* MessageCell.swift */; };
 		CCB38CAF2AF6FB6C003BC40C /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB38CAD2AF6FB6C003BC40C /* MessageCell.xib */; };
+		CCB38CB82AF8273C003BC40C /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCB38CB72AF8273C003BC40C /* ColorAssets.xcassets */; };
+		CCB38CBB2AF9F3FD003BC40C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB38CBA2AF9F3FD003BC40C /* Colors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		CCB38CAA2AF6BF9D003BC40C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		CCB38CAC2AF6FB6C003BC40C /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		CCB38CAD2AF6FB6C003BC40C /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		CCB38CB72AF8273C003BC40C /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
+		CCB38CBA2AF9F3FD003BC40C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +176,7 @@
 				CC9E58D72AD9AED800F8ED3D /* LaunchScreen.storyboard */,
 				CC9E58DA2AD9AED800F8ED3D /* Info.plist */,
 				CC9E59272AE0F36500F8ED3D /* GoogleService-Info.plist */,
+				CCB38CB72AF8273C003BC40C /* ColorAssets.xcassets */,
 			);
 			path = ChatApp;
 			sourceTree = "<group>";
@@ -220,6 +225,7 @@
 		CC9E590F2ADE37ED00F8ED3D /* ChatAppUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				CCB38CB92AF9F3E6003BC40C /* Colors */,
 				CC9E59222ADF7AB900F8ED3D /* Fonts */,
 				CC9E59102ADE37ED00F8ED3D /* ChatAppUIKit.h */,
 				CC9E59112ADE37ED00F8ED3D /* ChatAppUIKit.docc */,
@@ -287,6 +293,14 @@
 				CCB38CAD2AF6FB6C003BC40C /* MessageCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CCB38CB92AF9F3E6003BC40C /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				CCB38CBA2AF9F3FD003BC40C /* Colors.swift */,
+			);
+			path = Colors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +437,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCB38CB82AF8273C003BC40C /* ColorAssets.xcassets in Resources */,
 				CC9E58D92AD9AED800F8ED3D /* LaunchScreen.storyboard in Resources */,
 				CC9E59282AE0F36500F8ED3D /* GoogleService-Info.plist in Resources */,
 				CC9E58D62AD9AED800F8ED3D /* Assets.xcassets in Resources */,
@@ -484,6 +499,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC9E59242ADF7AF300F8ED3D /* Fonts.swift in Sources */,
+				CCB38CBB2AF9F3FD003BC40C /* Colors.swift in Sources */,
 				CC9E59122ADE37ED00F8ED3D /* ChatAppUIKit.docc in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

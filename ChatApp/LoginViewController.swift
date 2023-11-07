@@ -24,7 +24,8 @@ class LoginViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupStrings()
-        loginLabel.font = Fonts.apply(.title, .semibold)
+        setupFonts()
+        setupColors()
     }
 }
 
@@ -35,6 +36,25 @@ extension LoginViewController {
         passwordTextField.placeholder = Strings.password
         loginButton.setTitle(Strings.login, for: .normal)
         signUpButton.setTitle(Strings.dontHaveAnAccount, for: .normal)
+    }
+    
+    func setupFonts() {
+        loginLabel.font = Fonts.apply(.title, .semibold)
+       //TODO - set font for placeholder? usernameTextField.attributedPlaceholder. = Fonts.apply(.subheadline, .regular)
+        usernameTextField.font = Fonts.apply(.subheadline, .regular)
+        passwordTextField.font = Fonts.apply(.subheadline, .regular)
+        loginButton.titleLabel?.font = Fonts.apply(.headline, .semibold)
+        signUpButton.titleLabel?.font = Fonts.apply(.headline, .semibold)
+    }
+    
+    func setupColors() {
+        loginLabel.textColor = Colors.text.color
+        usernameTextField.textColor = Colors.text.color
+        passwordTextField.textColor = Colors.text.color
+        loginButton.backgroundColor = Colors.primary.color
+        loginButton.tintColor = Colors.white.color
+        signUpButton.tintColor = Colors.text.color
+        
     }
     
     @IBAction func loginButtonPressed() {

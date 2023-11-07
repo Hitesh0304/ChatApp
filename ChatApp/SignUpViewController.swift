@@ -111,13 +111,16 @@ extension SignUpViewController {
     }
     
     func navigateToHome() {
-        guard let tabVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "TabVC") as? UITabBarController else {
+        guard let tabVC = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(identifier: "TabBarVC") as? UITabBarController else {
             return
         }
         
-        tabVC.modalPresentationStyle = .fullScreen
+        let navigationController = UINavigationController(rootViewController: tabVC)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.modalPresentationCapturesStatusBarAppearance = true
+        
         dismiss(animated: false) {[weak self] in
-            self?.present(tabVC, animated: true)
+            self?.present(navigationController, animated: true)
         }
     }
     

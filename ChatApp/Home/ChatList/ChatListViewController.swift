@@ -15,8 +15,6 @@ class ChatListViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navigationController?.isNavigationBarHidden = false
-        navigationItem.title = "Nav Bar"
     }
 
     @IBAction func showChatPressed(_ sender: UIButton) {

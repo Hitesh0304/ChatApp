@@ -12,7 +12,6 @@ import ChatAppUIKit
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var signUpLabel: UILabel!
-    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var usernameTextField: UITextField!
@@ -27,7 +26,8 @@ class SignUpViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         setupStrings()
-        signUpLabel.font = Fonts.apply(.title, .semibold)
+        setupFonts()
+        setupColors()
     }
 }
 
@@ -43,48 +43,71 @@ extension SignUpViewController {
         loginButton.setTitle(Strings.alreadyHaveAnAccount, for: .normal)
     }
     
+    func setupFonts() {
+        signUpLabel.font = Fonts.apply(.title, .semibold)
+        nameTextField.font = Fonts.apply(.subheadline, .regular)
+        emailTextField.font = Fonts.apply(.subheadline, .regular)
+        usernameTextField.font = Fonts.apply(.subheadline, .regular)
+        passwordTextField.font = Fonts.apply(.subheadline, .regular)
+        confirmPasswordTextField.font = Fonts.apply(.subheadline, .regular)
+        signUpButton.titleLabel?.font = Fonts.apply(.headline, .semibold)
+        loginButton.titleLabel?.font = Fonts.apply(.headline, .semibold)
+    }
+    
+    func setupColors() {
+        view.backgroundColor = Colors.background.color
+        signUpLabel.textColor = Colors.text.color
+        nameTextField.backgroundColor = Colors.secondaryBackground.color
+        nameTextField.textColor = Colors.text.color
+        emailTextField.backgroundColor = Colors.secondaryBackground.color
+        emailTextField.textColor = Colors.text.color
+        usernameTextField.backgroundColor = Colors.secondaryBackground.color
+        usernameTextField.textColor = Colors.text.color
+        passwordTextField.backgroundColor = Colors.secondaryBackground.color
+        passwordTextField.textColor = Colors.text.color
+        confirmPasswordTextField.backgroundColor = Colors.secondaryBackground.color
+        confirmPasswordTextField.textColor = Colors.text.color
+        signUpButton.backgroundColor = Colors.primary.color
+        signUpButton.tintColor = Colors.white.color
+        loginButton.tintColor = Colors.text.color
+    }
+    
     @IBAction func loginButtonPressed() {
         self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func signUpButtonPressed() {
         guard let name = nameTextField.text, !name.isEmpty else {
-            //TODO - Highlight field with error
             showErrorUI(txtfield: nameTextField)
             print("name error")
             return
         }
         
         guard let email = emailTextField.text, !email.isEmpty else {
-            //TODO - Highlight field with error
             showErrorUI(txtfield: emailTextField)
             print("email error")
             return
         }
         
         guard isValidEmail(email) else {
-            //TODO - Highlight field with error that email is not valid
             print("email format error")
             showErrorUI(txtfield: emailTextField)
             return
         }
         
         guard let username = usernameTextField.text, !username.isEmpty else {
-            //TODO - Highlight field with error
             showErrorUI(txtfield: usernameTextField)
             print("username error")
             return
         }
         
         guard let password = passwordTextField.text, !password.isEmpty else {
-            //TODO - Highlight field with error
             showErrorUI(txtfield: passwordTextField)
             print("password error")
             return
         }
         
         guard let confirmPassword = confirmPasswordTextField.text, !confirmPassword.isEmpty, confirmPassword == password else {
-            //TODO - Highlight field with error
             showErrorUI(txtfield: confirmPasswordTextField)
             print("confirmPassword error")
             return

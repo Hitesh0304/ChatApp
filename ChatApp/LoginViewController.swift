@@ -48,8 +48,11 @@ extension LoginViewController {
     }
     
     func setupColors() {
+        view.backgroundColor = Colors.background.color
         loginLabel.textColor = Colors.text.color
+        usernameTextField.backgroundColor = Colors.secondaryBackground.color
         usernameTextField.textColor = Colors.text.color
+        passwordTextField.backgroundColor = Colors.secondaryBackground.color
         passwordTextField.textColor = Colors.text.color
         loginButton.backgroundColor = Colors.primary.color
         loginButton.tintColor = Colors.white.color

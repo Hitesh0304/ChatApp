@@ -60,13 +60,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aL-EO-wxI">
-                                <rect key="frame" x="20" y="269.66666666666669" width="173" height="20.333333333333314"/>
+                                <rect key="frame" x="20" y="281.66666666666669" width="173" height="20.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="g3B-dw-eLr">
-                                <rect key="frame" x="20" y="310" width="353" height="50"/>
+                                <rect key="frame" x="20" y="322" width="353" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hBj-8P-Znw">
                                         <rect key="frame" x="0.0" y="0.0" width="54.333333333333336" height="50"/>
@@ -87,8 +87,11 @@
                                     <constraint firstAttribute="height" constant="50" id="2r4-AS-dWM"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mE-mI-rum">
-                                <rect key="frame" x="20" y="179.66666666666666" width="173" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mE-mI-rum">
+                                <rect key="frame" x="20" y="179.66666666666666" width="133" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="Q1d-fv-B2n"/>
+                                </constraints>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -107,7 +110,7 @@
                             <constraint firstItem="g3B-dw-eLr" firstAttribute="top" secondItem="5aL-EO-wxI" secondAttribute="bottom" constant="20" id="Scj-t9-uId"/>
                             <constraint firstItem="RGR-Kv-Eb7" firstAttribute="top" secondItem="RoE-1E-a3h" secondAttribute="top" constant="20" id="TOU-3S-Nzz"/>
                             <constraint firstItem="Gcc-G8-c2k" firstAttribute="leading" secondItem="RoE-1E-a3h" secondAttribute="leading" constant="20" id="Za6-bx-Ir8"/>
-                            <constraint firstItem="RoE-1E-a3h" firstAttribute="trailing" secondItem="2mE-mI-rum" secondAttribute="trailing" constant="200" id="mfv-Hn-nPw"/>
+                            <constraint firstItem="RoE-1E-a3h" firstAttribute="trailing" secondItem="2mE-mI-rum" secondAttribute="trailing" constant="240" id="mfv-Hn-nPw"/>
                             <constraint firstItem="Gcc-G8-c2k" firstAttribute="top" secondItem="RGR-Kv-Eb7" secondAttribute="bottom" constant="40" id="o5S-1F-lkX"/>
                             <constraint firstItem="5aL-EO-wxI" firstAttribute="top" secondItem="2mE-mI-rum" secondAttribute="bottom" constant="60" id="rW1-62-2ga"/>
                             <constraint firstItem="RoE-1E-a3h" firstAttribute="trailing" secondItem="5aL-EO-wxI" secondAttribute="trailing" constant="200" id="ste-dU-TEY"/>

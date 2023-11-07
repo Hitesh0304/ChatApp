@@ -23,6 +23,7 @@ class SettingsViewController: UIViewController {
         super.viewDidLoad()
         setupStrings()
         setupFonts()
+        setupColors()
     }
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
@@ -62,6 +63,13 @@ extension SettingsViewController {
     }
     
     func setupColors() {
-        
+        view.backgroundColor = Colors.background.color
+        settingsLabel.textColor = Colors.text.color
+        profileLabel.textColor = Colors.text.color
+        logOutButton.backgroundColor = Colors.primary.color
+        logOutButton.tintColor = Colors.white.color
+        personalizeLabel.textColor = Colors.text.color
+        themeLabel.textColor = Colors.text.color
+        themeControl.tintColor = Colors.text.color
     }
 }

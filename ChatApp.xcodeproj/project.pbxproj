@@ -45,6 +45,7 @@
 		CCB38CB82AF8273C003BC40C /* ColorAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CCB38CB72AF8273C003BC40C /* ColorAssets.xcassets */; };
 		CCB38CBB2AF9F3FD003BC40C /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB38CBA2AF9F3FD003BC40C /* Colors.swift */; };
 		CCB38CBE2AFAE3B1003BC40C /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = CCB38CBD2AFAE3B1003BC40C /* IQKeyboardManagerSwift */; };
+		CCB38CC02AFB3C20003BC40C /* ChatHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB38CBF2AFB3C20003BC40C /* ChatHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +113,7 @@
 		CCB38CAD2AF6FB6C003BC40C /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		CCB38CB72AF8273C003BC40C /* ColorAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ColorAssets.xcassets; sourceTree = "<group>"; };
 		CCB38CBA2AF9F3FD003BC40C /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CCB38CBF2AFB3C20003BC40C /* ChatHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 				CCB38CB32AF81EAD003BC40C /* Settings */,
 				CCB38CB42AF81EB5003BC40C /* Contacts */,
 				CC9E58F22ADE2EE100F8ED3D /* Home.storyboard */,
+				CCB38CBF2AFB3C20003BC40C /* ChatHandler.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				CC9E58CD2AD9AED700F8ED3D /* AppDelegate.swift in Sources */,
 				CCB38CA92AF6BF38003BC40C /* Message.swift in Sources */,
 				CC9E58CF2AD9AED700F8ED3D /* SceneDelegate.swift in Sources */,
+				CCB38CC02AFB3C20003BC40C /* ChatHandler.swift in Sources */,
 				CCB38CA72AF34F27003BC40C /* AuthHandler.swift in Sources */,
 				CC9E58EC2ADE18BB00F8ED3D /* ContactsViewController.swift in Sources */,
 				CC9E58E52ADB54B400F8ED3D /* ChatListViewController.swift in Sources */,

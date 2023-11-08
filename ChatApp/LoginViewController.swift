@@ -35,7 +35,7 @@ extension LoginViewController {
     }
     
     func setupFonts() {
-        loginLabel.font = Fonts.apply(.title, .semibold)
+        loginLabel.font = Fonts.apply(.title, .bold)
        //TODO - set font for placeholder? usernameTextField.attributedPlaceholder. = Fonts.apply(.subheadline, .regular)
         usernameTextField.font = Fonts.apply(.subheadline, .regular)
         passwordTextField.font = Fonts.apply(.subheadline, .regular)

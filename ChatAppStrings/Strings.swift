@@ -27,5 +27,4 @@ public struct Strings {
     public static let light = "Light"
     public static let system = "System"
     public static let dark = "Dark"
-    
 }

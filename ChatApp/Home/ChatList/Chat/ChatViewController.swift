@@ -7,7 +7,7 @@
 
 import UIKit
 import ChatAppStrings
-import FirebaseAuth
+import ChatAppUIKit
 import FirebaseFirestore
 
 class ChatViewController: UIViewController {
@@ -28,50 +28,42 @@ class ChatViewController: UIViewController {
         tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "ReusableCell")
         
         loadMessages()
-        sendButton.setTitle(Strings.send, for: .normal)
-        
+        setupColors()
+        setupFonts()
     }
     
     func loadMessages() {
-        db.collection("messages")
-            .order(by: "dateField")
-            .addSnapshotListener() { (querySnapshot, error) in
-                
-                self.messages = []
-                
-                if let e = error {
-                    print("Error getting documents: \(e)")
-                } else {
-                    for document in querySnapshot!.documents {
-                        let data = document.data()
-                        if let messageSender = data["senderField"] as? String, let messageBody = data["bodyField"] as? String {
-                            let newMessage = Message(sender: messageSender, body: messageBody)
-                            self.messages.append(newMessage)
-                            
-                            DispatchQueue.main.async {
-                                
-                                self.tableView.reloadData()
-                            }
-                        }
-                    }
-                }
-            }
-    }
-    
-    @IBAction func sendButtonPressed(_ sender: UIButton) {
-        if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
-            db.collection("messages").addDocument(data: [
-                "senderField": messageSender,
-                "bodyField": messageBody,
-                "dateField": Date().timeIntervalSince1970
-            ]) { (error) in
-                if let e = error {
-                    print("Issue saving data to firestore, \(e)")
-                } else {
-                    print("Successfully saved data.")
+        ChatHandler.shared.loadMessages { [weak self] messages in
+            self?.messages = messages
+            
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+                DispatchQueue.main.async {
+                    let indexPath = IndexPath(row: messages.count - 1, section: 0)
+                    self?.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
                 }
             }
         }
+    }
+    
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+        if let messageBody = messageTextField.text, !messageBody.isEmpty {
+            ChatHandler.shared.sendMessage(msgBody: messageBody) { [weak self] isSuccessful in
+                if isSuccessful {
+                    self?.messageTextField.text = nil
+                }
+            }
+        }
+    }
+    
+    func setupColors() {
+        view.backgroundColor = Colors.background.color
+        messageTextField.backgroundColor = Colors.secondaryBackground.color
+        messageTextField.textColor = Colors.text.color
+    }
+    
+    func setupFonts() {
+        messageTextField.font = Fonts.apply(.headline, .regular)
     }
 }
 

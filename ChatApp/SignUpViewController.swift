@@ -43,7 +43,7 @@ extension SignUpViewController {
     }
     
     func setupFonts() {
-        signUpLabel.font = Fonts.apply(.title, .semibold)
+        signUpLabel.font = Fonts.apply(.title, .bold)
         nameTextField.font = Fonts.apply(.subheadline, .regular)
         emailTextField.font = Fonts.apply(.subheadline, .regular)
         usernameTextField.font = Fonts.apply(.subheadline, .regular)

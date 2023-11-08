@@ -13,7 +13,6 @@ class ChatListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Chats"
         // Do any additional setup after loading the view.
     }
 

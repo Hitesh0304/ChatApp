@@ -17,6 +17,10 @@ class ChatHandler {
         
     }
     
+    var messageSender: String? {
+        return Auth.auth().currentUser?.email
+    }
+    
     func loadMessages(completion: @escaping([Message]) -> Void) {
         
         db.collection("messages")

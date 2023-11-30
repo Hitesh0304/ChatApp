@@ -26,6 +26,7 @@ class SettingsViewController: UIViewController {
         setupStrings()
         setupFonts()
         setupColors()
+        themeControl.addTarget(self, action: #selector(changeTheme(_:)), for: .valueChanged)
     }
     
     @IBAction func logOutButtonPressed(_ sender: Any) {
@@ -73,5 +74,23 @@ extension SettingsViewController {
         personalizeLabel.textColor = Colors.text.color
         themeLabel.textColor = Colors.text.color
         themeControl.tintColor = Colors.text.color
+    }
+    
+    @objc func changeTheme(_ sender: UISegmentedControl) {
+        guard let window = UIApplication.shared.windows.first else {
+            return
+        }
+        
+        UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve) {
+            if sender.selectedSegmentIndex == 0 {
+                window.overrideUserInterfaceStyle = .light
+            }
+            else if sender.selectedSegmentIndex == 1 {
+                window.overrideUserInterfaceStyle = .unspecified
+            }
+            else if sender.selectedSegmentIndex == 2 {
+                window.overrideUserInterfaceStyle = .dark
+            }
+        }
     }
 }

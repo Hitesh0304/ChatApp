@@ -79,6 +79,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         if message.sender == ChatHandler.shared.messageSender {
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
+            cell.rightImageView.image = UIImage(named: "me-image")
             cell.messageBubble.backgroundColor = Colors.secondaryBackground.color
         }
         
@@ -86,6 +87,7 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         else {
             cell.leftImageView.isHidden = false
             cell.rightImageView.isHidden = true
+            cell.leftImageView.image = UIImage(named: "you-image")
             cell.messageBubble.backgroundColor = Colors.secondaryBackground.color
         }
         

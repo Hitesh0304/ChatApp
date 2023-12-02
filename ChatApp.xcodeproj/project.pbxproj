@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC44D9F82B1BC3100053CAB3 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC44D9F72B1BC3100053CAB3 /* WidgetKit.framework */; };
+		CC44D9FA2B1BC3100053CAB3 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC44D9F92B1BC3100053CAB3 /* SwiftUI.framework */; };
+		CC44D9FD2B1BC3100053CAB3 /* ChatAppWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44D9FC2B1BC3100053CAB3 /* ChatAppWidgetBundle.swift */; };
+		CC44D9FF2B1BC3100053CAB3 /* ChatAppWidgetLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44D9FE2B1BC3100053CAB3 /* ChatAppWidgetLiveActivity.swift */; };
+		CC44DA012B1BC3100053CAB3 /* ChatAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44DA002B1BC3100053CAB3 /* ChatAppWidget.swift */; };
+		CC44DA032B1BC3120053CAB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC44DA022B1BC3120053CAB3 /* Assets.xcassets */; };
+		CC44DA072B1BC3120053CAB3 /* ChatAppWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CC44D9F52B1BC3100053CAB3 /* ChatAppWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		CC9E58CD2AD9AED700F8ED3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58CC2AD9AED700F8ED3D /* AppDelegate.swift */; };
 		CC9E58CF2AD9AED700F8ED3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58CE2AD9AED700F8ED3D /* SceneDelegate.swift */; };
 		CC9E58D42AD9AED700F8ED3D /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9E58D22AD9AED700F8ED3D /* Registration.storyboard */; };
@@ -49,6 +56,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CC44DA052B1BC3120053CAB3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9E58C12AD9AED700F8ED3D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC44D9F42B1BC3100053CAB3;
+			remoteInfo = ChatAppWidgetExtension;
+		};
 		CC9E58FF2ADE366200F8ED3D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CC9E58C12AD9AED700F8ED3D /* Project object */;
@@ -66,6 +80,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		CC44DA082B1BC3120053CAB3 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CC44DA072B1BC3120053CAB3 /* ChatAppWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9E59062ADE366200F8ED3D /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,6 +106,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC44D9F52B1BC3100053CAB3 /* ChatAppWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ChatAppWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC44D9F72B1BC3100053CAB3 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CC44D9F92B1BC3100053CAB3 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		CC44D9FC2B1BC3100053CAB3 /* ChatAppWidgetBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppWidgetBundle.swift; sourceTree = "<group>"; };
+		CC44D9FE2B1BC3100053CAB3 /* ChatAppWidgetLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppWidgetLiveActivity.swift; sourceTree = "<group>"; };
+		CC44DA002B1BC3100053CAB3 /* ChatAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppWidget.swift; sourceTree = "<group>"; };
+		CC44DA022B1BC3120053CAB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC44DA042B1BC3120053CAB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC9E58C92AD9AED700F8ED3D /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9E58CC2AD9AED700F8ED3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC9E58CE2AD9AED700F8ED3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +150,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CC44D9F22B1BC3100053CAB3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC44D9FA2B1BC3100053CAB3 /* SwiftUI.framework in Frameworks */,
+				CC44D9F82B1BC3100053CAB3 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9E58C62AD9AED700F8ED3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -149,12 +191,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC44D9F62B1BC3100053CAB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC44D9F72B1BC3100053CAB3 /* WidgetKit.framework */,
+				CC44D9F92B1BC3100053CAB3 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC44D9FB2B1BC3100053CAB3 /* ChatAppWidget */ = {
+			isa = PBXGroup;
+			children = (
+				CC44D9FC2B1BC3100053CAB3 /* ChatAppWidgetBundle.swift */,
+				CC44D9FE2B1BC3100053CAB3 /* ChatAppWidgetLiveActivity.swift */,
+				CC44DA002B1BC3100053CAB3 /* ChatAppWidget.swift */,
+				CC44DA022B1BC3120053CAB3 /* Assets.xcassets */,
+				CC44DA042B1BC3120053CAB3 /* Info.plist */,
+			);
+			path = ChatAppWidget;
+			sourceTree = "<group>";
+		};
 		CC9E58C02AD9AED700F8ED3D = {
 			isa = PBXGroup;
 			children = (
 				CC9E58CB2AD9AED700F8ED3D /* ChatApp */,
 				CC9E58FA2ADE366200F8ED3D /* ChatAppStrings */,
 				CC9E590F2ADE37ED00F8ED3D /* ChatAppUIKit */,
+				CC44D9FB2B1BC3100053CAB3 /* ChatAppWidget */,
+				CC44D9F62B1BC3100053CAB3 /* Frameworks */,
 				CC9E58CA2AD9AED700F8ED3D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -165,6 +230,7 @@
 				CC9E58C92AD9AED700F8ED3D /* ChatApp.app */,
 				CC9E58F92ADE366200F8ED3D /* ChatAppStrings.framework */,
 				CC9E590E2ADE37ED00F8ED3D /* ChatAppUIKit.framework */,
+				CC44D9F52B1BC3100053CAB3 /* ChatAppWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -330,6 +396,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		CC44D9F42B1BC3100053CAB3 /* ChatAppWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC44DA0B2B1BC3120053CAB3 /* Build configuration list for PBXNativeTarget "ChatAppWidgetExtension" */;
+			buildPhases = (
+				CC44D9F12B1BC3100053CAB3 /* Sources */,
+				CC44D9F22B1BC3100053CAB3 /* Frameworks */,
+				CC44D9F32B1BC3100053CAB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatAppWidgetExtension;
+			productName = ChatAppWidgetExtension;
+			productReference = CC44D9F52B1BC3100053CAB3 /* ChatAppWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CC9E58C82AD9AED700F8ED3D /* ChatApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC9E58DD2AD9AED800F8ED3D /* Build configuration list for PBXNativeTarget "ChatApp" */;
@@ -338,12 +421,14 @@
 				CC9E58C62AD9AED700F8ED3D /* Frameworks */,
 				CC9E58C72AD9AED700F8ED3D /* Resources */,
 				CC9E59062ADE366200F8ED3D /* Embed Frameworks */,
+				CC44DA082B1BC3120053CAB3 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				CC9E59002ADE366200F8ED3D /* PBXTargetDependency */,
 				CC9E59152ADE37ED00F8ED3D /* PBXTargetDependency */,
+				CC44DA062B1BC3120053CAB3 /* PBXTargetDependency */,
 			);
 			name = ChatApp;
 			packageProductDependencies = (
@@ -404,6 +489,9 @@
 				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1500;
 				TargetAttributes = {
+					CC44D9F42B1BC3100053CAB3 = {
+						CreatedOnToolsVersion = 15.0;
+					};
 					CC9E58C82AD9AED700F8ED3D = {
 						CreatedOnToolsVersion = 15.0;
 					};
@@ -435,11 +523,20 @@
 				CC9E58C82AD9AED700F8ED3D /* ChatApp */,
 				CC9E58F82ADE366200F8ED3D /* ChatAppStrings */,
 				CC9E590D2ADE37ED00F8ED3D /* ChatAppUIKit */,
+				CC44D9F42B1BC3100053CAB3 /* ChatAppWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CC44D9F32B1BC3100053CAB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC44DA032B1BC3120053CAB3 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9E58C72AD9AED700F8ED3D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -474,6 +571,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CC44D9F12B1BC3100053CAB3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC44D9FF2B1BC3100053CAB3 /* ChatAppWidgetLiveActivity.swift in Sources */,
+				CC44D9FD2B1BC3100053CAB3 /* ChatAppWidgetBundle.swift in Sources */,
+				CC44DA012B1BC3100053CAB3 /* ChatAppWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9E58C52AD9AED700F8ED3D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +622,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CC44DA062B1BC3120053CAB3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC44D9F42B1BC3100053CAB3 /* ChatAppWidgetExtension */;
+			targetProxy = CC44DA052B1BC3120053CAB3 /* PBXContainerItemProxy */;
+		};
 		CC9E59002ADE366200F8ED3D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CC9E58F82ADE366200F8ED3D /* ChatAppStrings */;
@@ -547,6 +659,62 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		CC44DA092B1BC3120053CAB3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4RJQ9V4KY;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatAppWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChatAppWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiteshmoudgil.ChatApp.ChatAppWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CC44DA0A2B1BC3120053CAB3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4RJQ9V4KY;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ChatAppWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ChatAppWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hiteshmoudgil.ChatApp.ChatAppWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		CC9E58DB2AD9AED800F8ED3D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -869,6 +1037,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CC44DA0B2B1BC3120053CAB3 /* Build configuration list for PBXNativeTarget "ChatAppWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC44DA092B1BC3120053CAB3 /* Debug */,
+				CC44DA0A2B1BC3120053CAB3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CC9E58C42AD9AED700F8ED3D /* Build configuration list for PBXProject "ChatApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

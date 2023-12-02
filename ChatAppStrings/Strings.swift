@@ -27,4 +27,6 @@ public struct Strings {
     public static let light = "Light"
     public static let system = "System"
     public static let dark = "Dark"
+    public static let chats = "Chats"
+    public static let contacts = "Contacts"
 }

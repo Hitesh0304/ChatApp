@@ -11,18 +11,15 @@ import SwiftUI
 
 struct ChatAppWidgetAttributes: ActivityAttributes {
     public struct ContentState: Codable, Hashable {
-        // Dynamic stateful properties about your activity go here!
         var emoji: String
     }
 
-    // Fixed non-changing properties about your activity go here!
     var name: String
 }
 
 struct ChatAppWidgetLiveActivity: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: ChatAppWidgetAttributes.self) { context in
-            // Lock screen/banner UI goes here
             VStack {
                 Text("Hello \(context.state.emoji)")
             }

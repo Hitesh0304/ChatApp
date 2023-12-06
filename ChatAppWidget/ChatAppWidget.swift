@@ -21,7 +21,6 @@ struct Provider: TimelineProvider {
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
-        // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
@@ -44,11 +43,9 @@ struct ChatAppWidgetEntryView : View {
 
     var body: some View {
         VStack {
-            Text("Time:")
+            Text("TalkEase")
             Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
+            Image("logo-TalkEase")
         }
     }
 }
@@ -67,8 +64,8 @@ struct ChatAppWidget: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("TalkEase")
+        .description("Widget for TalkEase")
     }
 }
 

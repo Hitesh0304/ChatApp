@@ -14,6 +14,10 @@
 		CC44DA012B1BC3100053CAB3 /* ChatAppWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44DA002B1BC3100053CAB3 /* ChatAppWidget.swift */; };
 		CC44DA032B1BC3120053CAB3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC44DA022B1BC3120053CAB3 /* Assets.xcassets */; };
 		CC44DA072B1BC3120053CAB3 /* ChatAppWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = CC44D9F52B1BC3100053CAB3 /* ChatAppWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CC44DA0F2B1BF3F40053CAB3 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44DA0D2B1BF3F40053CAB3 /* ChatCell.swift */; };
+		CC44DA102B1BF3F40053CAB3 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC44DA0E2B1BF3F40053CAB3 /* ChatCell.xib */; };
+		CC44DA142B1C02830053CAB3 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC44DA122B1C02830053CAB3 /* ContactCell.swift */; };
+		CC44DA152B1C02830053CAB3 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC44DA132B1C02830053CAB3 /* ContactCell.xib */; };
 		CC9E58CD2AD9AED700F8ED3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58CC2AD9AED700F8ED3D /* AppDelegate.swift */; };
 		CC9E58CF2AD9AED700F8ED3D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9E58CE2AD9AED700F8ED3D /* SceneDelegate.swift */; };
 		CC9E58D42AD9AED700F8ED3D /* Registration.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC9E58D22AD9AED700F8ED3D /* Registration.storyboard */; };
@@ -114,6 +118,10 @@
 		CC44DA002B1BC3100053CAB3 /* ChatAppWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAppWidget.swift; sourceTree = "<group>"; };
 		CC44DA022B1BC3120053CAB3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CC44DA042B1BC3120053CAB3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC44DA0D2B1BF3F40053CAB3 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		CC44DA0E2B1BF3F40053CAB3 /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		CC44DA122B1C02830053CAB3 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		CC44DA132B1C02830053CAB3 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
 		CC9E58C92AD9AED700F8ED3D /* ChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9E58CC2AD9AED700F8ED3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC9E58CE2AD9AED700F8ED3D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +218,24 @@
 				CC44DA042B1BC3120053CAB3 /* Info.plist */,
 			);
 			path = ChatAppWidget;
+			sourceTree = "<group>";
+		};
+		CC44DA0C2B1BF3C50053CAB3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				CC44DA0D2B1BF3F40053CAB3 /* ChatCell.swift */,
+				CC44DA0E2B1BF3F40053CAB3 /* ChatCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		CC44DA112B1C026D0053CAB3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				CC44DA122B1C02830053CAB3 /* ContactCell.swift */,
+				CC44DA132B1C02830053CAB3 /* ContactCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		CC9E58C02AD9AED700F8ED3D = {
@@ -325,6 +351,7 @@
 		CCB38CB22AF81E9F003BC40C /* ChatList */ = {
 			isa = PBXGroup;
 			children = (
+				CC44DA0C2B1BF3C50053CAB3 /* Cell */,
 				CCB38CB52AF81EE4003BC40C /* Chat */,
 				CC9E58E42ADB54B400F8ED3D /* ChatListViewController.swift */,
 			);
@@ -342,6 +369,7 @@
 		CCB38CB42AF81EB5003BC40C /* Contacts */ = {
 			isa = PBXGroup;
 			children = (
+				CC44DA112B1C026D0053CAB3 /* Cells */,
 				CC9E58EB2ADE18BB00F8ED3D /* ContactsViewController.swift */,
 			);
 			path = Contacts;
@@ -541,11 +569,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC44DA152B1C02830053CAB3 /* ContactCell.xib in Resources */,
 				CCB38CB82AF8273C003BC40C /* ColorAssets.xcassets in Resources */,
 				CC9E58D92AD9AED800F8ED3D /* LaunchScreen.storyboard in Resources */,
 				CC9E59282AE0F36500F8ED3D /* GoogleService-Info.plist in Resources */,
 				CC9E58D62AD9AED800F8ED3D /* Assets.xcassets in Resources */,
 				CC9E58D42AD9AED700F8ED3D /* Registration.storyboard in Resources */,
+				CC44DA102B1BF3F40053CAB3 /* ChatCell.xib in Resources */,
 				CCB38CAF2AF6FB6C003BC40C /* MessageCell.xib in Resources */,
 				CC9E59202ADF7A1400F8ED3D /* ProximaNova-Bold.otf in Resources */,
 				CC9E591F2ADF7A1400F8ED3D /* ProximaNova-Regular.otf in Resources */,
@@ -595,7 +625,9 @@
 				CCB38CA72AF34F27003BC40C /* AuthHandler.swift in Sources */,
 				CC9E58EC2ADE18BB00F8ED3D /* ContactsViewController.swift in Sources */,
 				CC9E58E52ADB54B400F8ED3D /* ChatListViewController.swift in Sources */,
+				CC44DA0F2B1BF3F40053CAB3 /* ChatCell.swift in Sources */,
 				CCB38CAB2AF6BF9D003BC40C /* ChatViewController.swift in Sources */,
+				CC44DA142B1C02830053CAB3 /* ContactCell.swift in Sources */,
 				CC9E58E32ADB547900F8ED3D /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

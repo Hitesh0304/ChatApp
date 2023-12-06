@@ -1,9 +1,3 @@
-//
-//  SettingsViewController.swift
-//  ChatApp
-//
-//  Created by Hitesh Moudgil on 2023-10-16.
-//
 
 import UIKit
 import ChatAppStrings

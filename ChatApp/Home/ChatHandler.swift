@@ -34,8 +34,8 @@ class ChatHandler {
                 } else {
                     for document in querySnapshot!.documents {
                         let data = document.data()
-                        if let messageSender = data["senderField"] as? String, let messageBody = data["bodyField"] as? String {
-                            let newMessage = Message(sender: messageSender, body: messageBody)
+                        if let messageSender = data["senderField"] as? String, let messageBody = data["bodyField"]  as? String, let messageDate = data["dateField"] as? TimeInterval {
+                            let newMessage = Message(sender: messageSender, body: messageBody, date: messageDate)
                             messages.append(newMessage)
                         }
                     }

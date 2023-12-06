@@ -16,6 +16,12 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var sendButton: UIButton!
     
     var messages: [Message] = []
+
+    private lazy var timeFormatter: DateFormatter = {
+       let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm a"
+        return formatter
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,10 +41,13 @@ class ChatViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
-                DispatchQueue.main.async {
-                    let indexPath = IndexPath(row: messages.count - 1, section: 0)
-                    self?.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                if !messages.isEmpty {
+                    DispatchQueue.main.async {
+                        let indexPath = IndexPath(row: messages.count - 1, section: 0)
+                        self?.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                    }
                 }
+                
             }
         }
     }
@@ -75,12 +84,17 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! MessageCell
         cell.messageLabel.text = message.body
         
+        let messageTime = timeFormatter.string(from: Date(timeIntervalSince1970: message.date))
+        
         //Message from current user
         if message.sender == ChatHandler.shared.messageSender {
             cell.leftImageView.isHidden = true
             cell.rightImageView.isHidden = false
             cell.rightImageView.image = UIImage(named: "me-image")
             cell.messageBubble.backgroundColor = Colors.secondaryBackground.color
+            cell.leftTimeLabel.isHidden = false
+            cell.rightTimeLabel.isHidden = true
+            cell.leftTimeLabel.text = messageTime
         }
         
         //Message from another sender
@@ -89,6 +103,9 @@ extension ChatViewController: UITableViewDataSource, UITableViewDelegate {
             cell.rightImageView.isHidden = true
             cell.leftImageView.image = UIImage(named: "you-image")
             cell.messageBubble.backgroundColor = Colors.secondaryBackground.color
+            cell.leftTimeLabel.isHidden = true
+            cell.rightTimeLabel.isHidden = false
+            cell.rightTimeLabel.text = messageTime
         }
         
         return cell

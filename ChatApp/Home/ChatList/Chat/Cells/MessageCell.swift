@@ -14,6 +14,8 @@ class MessageCell: UITableViewCell {
     @IBOutlet weak var rightImageView: UIImageView!
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var leftTimeLabel: UILabel!
+    @IBOutlet weak var rightTimeLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -31,10 +33,14 @@ class MessageCell: UITableViewCell {
     func setupColors() {
         messageLabel.textColor = Colors.text.color
         messageBubble.backgroundColor = Colors.secondaryBackground.color
+        leftTimeLabel.textColor = Colors.text.color
+        rightTimeLabel.textColor = Colors.text.color
     }
     
     func setupFonts() {
         messageLabel.font = Fonts.apply(.headline, .regular)
+        leftTimeLabel.font = Fonts.apply(.footnote, .regular)
+        rightTimeLabel.font = Fonts.apply(.footnote, .regular)
     }
     
 }
